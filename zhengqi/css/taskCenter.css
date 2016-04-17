@@ -1,0 +1,139 @@
+.m-taskcenter{
+	text-align: center;
+	margin: 1.5rem 0 0 0;
+}
+.m-taskcenter .task-status{
+	background: rgba(255,255,255,.2);
+	padding: 0.5rem 0;
+	margin: .5rem auto;
+	text-align: center;
+	font-size: 1.2rem;
+}
+.task-status .num{
+	margin:0 5px;
+}
+.m-taskcenter ul{
+	list-style-type: none;
+}
+.m-taskcenter li,.m-taskcenter ul{
+	margin: 0;
+	padding: 0;
+}
+.tasklist li{
+	width: 100%;
+	height: 11rem;
+	background: #000000 url('./../img/center_bg_01.jpg') no-repeat;
+	background-size: cover;
+	margin-top: 1rem;
+	padding: 1.5rem 0;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.tasklist p{
+	margin: 0.2rem 0;
+	font-size: 1.2rem;
+	z-index: 2;
+	position: relative;
+}
+.tasklist .icon{
+	height: 5rem;
+	margin-bottom: 0.5rem;
+	z-index: 2;
+	position: relative;
+}
+.tasklist .taskname{
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+.tasklist .accept img{
+	height: 1.6rem;
+    margin: 1rem 0 0 0;
+    z-index: 2;
+    position: relative;
+}
+.tasklist .countdown{
+	display: none;
+	position: relative;
+	z-index: 2;
+	margin: 1rem 0 0 0;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.tasklist .cooling:before{
+	content: ' ';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	background: rgba(0,0,0,.4);
+	z-index: 1;
+}
+.tasklist .cooling .accept{
+	display: none;
+}
+
+.tasklist .cooling .countdown{
+	display: block;
+}
+.tasklist .countdown .time{
+    display: inline-block;
+    margin: 0 .5rem;
+}
+.tasklist .countdown .process{
+    display: inline-block;
+    width: 35%;
+    background: rgba(255,255,255,.4);
+    height: 0.5rem;
+}
+.tasklist .countdown .cur-pcs{
+	background: rgba(255,255,255,1);
+	width: 100%;
+	height: 100%;
+}
+
+
+.rewardlist li{
+	display: table;
+	width: 100%;
+	margin: 1rem 0 0 0
+}
+.rewardlist .pic, .rewardlist .info{
+	display: table-cell;
+}
+.rewardlist .pic{
+	width: 5rem;
+}
+.pic img{
+	width: 100%;
+}
+.rewardlist .info{
+	padding-left:.5rem;
+	vertical-align: top;
+	text-align: left;
+}
+.rewardlist p{
+	margin: 0 0 .1rem 0;
+}
+.rewardlist .reward_name{
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin: .5rem 0;
+}
+.rewardlist .process{
+	width: 80%;
+	height: 0.7rem;
+	background: rgba(167,167,167,.4);
+	margin: .5rem 0;
+}
+.rewardlist .cur-pcs{
+	height: 100%;
+	width: 50%;
+	background: #a7a7a7;
+}
+.task-footer{
+	margin-bottom: 2rem;
+}

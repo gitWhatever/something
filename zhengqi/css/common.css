@@ -1,0 +1,105 @@
+html {
+    font-size:10px
+}
+@media screen and (min-width:321px) and (max-width:375px) {
+    html {
+    	font-size:11px
+	}
+} 
+@media screen and (min-width:376px) and (max-width:414px) {
+    html {
+    	font-size:12px
+	}
+} 
+@media screen and (min-width:415px) and (max-width:639px) {
+    html {
+    	font-size:15px
+	}
+} 
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+    	font-size:20px
+	}
+} 
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+    	font-size:22.5px
+	}
+} 
+@media screen and (min-width:750px) and (max-width:799px) {
+    html {
+    	font-size:23.5px
+	}
+} 
+@media screen and (min-width:800px) {
+    html {
+    	font-size:25px
+	}
+}
+html,body{
+	margin:0;
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+}
+body{
+	font-family: "黑体",Tahoma,Helvetica,arial,sans-serif;
+	background: #000 url(../img/bg.jpg) center top repeat;
+	background-size: 100%;
+    background-size: contain;
+	color: #fff;
+}
+img{
+	max-width: 100%;
+	border:0;
+}
+a{
+    text-decoration: none;
+}
+.clearfix {
+    zoom:1;
+}
+.clearfix:after {
+    content: "";
+    visibility: hidden;
+    width: 0;
+    height: 100%;
+    clear: both;
+    display: block;
+}
+.zidingyi:before {
+    content:attr(data-prefix);
+    display: inline-block;
+    margin-right: 10px;
+}
+.g-mid{
+	width: 89.5%;
+	margin: 0 auto;
+	display: block;
+}
+.m-header{
+	margin-top: 2.5rem;
+	font-size: 1.8rem;
+}
+.header-img{
+	width: 4rem;
+	min-height: 4rem;
+	vertical-align: middle;
+}
+.g-mid .word{
+    color: #a7a7a7;
+    font-size: 1.4rem;
+}
+.g-logo{
+    margin:5rem 0 3rem;
+    text-align: center;
+}
+.g-logo img{
+    width: 54%;
+}
+.g-bold{
+    font-weight: bold;
+}
+.f-left{
+    float:left;
+}

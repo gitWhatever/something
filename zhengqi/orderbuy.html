@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <title>订单</title>
+    <link rel="stylesheet" href="css/common.css" media='screen'>
+    <link rel="stylesheet" href="css/orderbuy.css" media='screen'>
+</head>
+<body>
+    <main class="g-mid">
+        <header>
+            <a href="#"><img src="img/back.png" alt=""></a>
+            确认购买
+        </header>
+        <section class="orderBox">
+            <div class="figure clearfix">
+                <div class="disimg">
+                    <img src="img/img.jpg" alt="">
+                </div>
+                <div class="desc">
+                    <div style="height: 100%;position: absolute;width: 100%;">
+                        <p class="order-name">突击小队套装 VPARK(VBOX)迷你套儿</p>
+                        <p class="zidingyi" id="price" data-prefix="&yen;">458.00</p>
+                        <div class="order-num ">
+                            <p>购买数量</p>
+                            <div class="m-numer clearfix">
+                                <a href="javascript:void(0)" class="add"><img src="img/jia.png" alt=""></a>
+                                <input type="text" class="num" value="1">
+                                <a href="javascript:void(0)" class="reduce"><img src="img/jianqu.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <section class="opacity-bg">
+            <a href="">
+                <div class="choose_pre clearfix">
+                    <span>请选择收货地址</span>
+                    <img src="img/right_buttom.png" alt="">
+                </div>
+                <div class="add-info">
+                    <p><span id="name">李煜</span><span id="mobile">13560599558</span></p>
+                    <address>北京市朝阳区樱花园西街胜古南里25号楼4单元103</address>
+                    <img src="img/right_buttom.png" alt="">
+                </div>
+            </a>
+        </section>
+
+        <section class="opacity-bg m-prize-box">
+            <a href="">
+                <div class="choose_pre clearfix">
+                    <span>已选奖品</span>
+                    <img src="img/right_buttom.png" alt="">
+                </div>
+                <div class="prize-list">
+                    <div class="s-prize">
+                        <img src="img/s-reward1.png" alt="">
+                    </div>
+                    <div class="s-prize">
+                        <img src="img/s-reward2.png" alt="">
+                    </div>
+                    <div class="s-prize">
+                        <img src="img/s-reward1.png" alt="">
+                    </div>
+                    <div class="s-prize">
+                        <img src="img/s-reward2.png" alt="">
+                    </div>
+                    <div class="s-prize empty"></div>
+                </div>
+            </a>
+            
+        </section>
+        <article class="m-yun-charge">
+            <span>运费 <span class="zidingyi" data-prefix="&yen;">10.00</span></span>
+            <p class="word">每天9点前购买多件商品，仅收一次运费，24小时内发货</p>
+        </article>
+        <section>
+            <div class="m-mr-diguo">
+                <img src="img/head_pic.png" alt="">
+                帝国执政官
+            </div>
+            <input type="text" class="m-input" placeholder="有特殊要求，在这里留言">
+        </section>
+    </main>
+    <footer class="m-buy">
+        <p>总额：<span class="zidingyi" id="totalPrice" data-prefix="&yen;">468.00</span></p>
+        <a href="javascript:do_submit()"><img src="img/buyBt.png" alt=""></a>
+    </footer>
+    <form id="dataBox">
+        <input type="hidden" name="amount" id="amount" value="1">
+        <input type="hidden" name="name">
+        <input type="hidden" name="moblie" >
+        <input type="hidden" name="provice" >
+        <input type="hidden" name="city">
+        <input type="hidden" name="zone" >
+        <input type="hidden" name="address">
+        <input type="hidden" name="reward">
+    </form>
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        var price=$("#price").text().trim();
+        $(document).on("click",".m-numer a",function(){
+            var me=$(this),
+                numReg=/^[1-9]*[1-9][0-9]*$/,
+                num=$(".num").val();
+            if(!numReg.test(num)){
+                alert("请输入数字。");
+                $(this).val(1);
+                return;
+            }
+            if(me.hasClass('add')){
+                $(".num").val(++num);
+            }else{
+                num==(num<=1)?1:--num;
+                $(".num").val(num);
+            }
+            $(".num").trigger('change');
+        }).on("change",".num",function(){
+            var numReg=/^[1-9]*[1-9][0-9]*$/;
+            var num=$(this).val();
+            if(!numReg.test(num)){
+                alert("请输入数字。");
+                $(this).val(1);
+                return;
+            }
+            $("#amount").val(num);
+            var tprice=num*parseInt(price)+10;
+            $("#totalPrice").text(tprice);
+        });
+        
+        function do_submit(){
+            var name=$("#name").text(),
+                mobile=$("#mobile").text();
+            if(!name || !mobile){
+                alert("请选择收货地址！");
+                return false;
+            }
+            var data=$("#dataBox").serialize(),
+                note=$(".m-input").val().trim();
+            note && (data+="&note="+encodeURIComponent(note));
+            location.href="/order/confirm_order?"+data;
+        }
+    </script>
+</body>
+</html>

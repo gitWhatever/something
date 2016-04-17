@@ -1,0 +1,58 @@
+ul, li {
+  padding: 0;
+  margin: 0; }
+
+.m-reward .main-img {
+  width: 100%; }
+.m-reward .operated {
+  width: 90%;
+  margin: 0.8rem auto; }
+.m-reward .operated-area {
+  width: 50%;
+  float: left;
+  padding: 1rem 1.3rem;
+  box-sizing: border-box; }
+.m-reward .operated-area + .operated-area {
+  border-left: 2px solid rgba(255, 255, 255, 0.2); }
+.m-reward .operated-area .title {
+  font-size: 1.5rem;
+  color: white; }
+.m-reward .operated-area img {
+  height: 1.5rem;
+  vertical-align: bottom; }
+
+.m-reward-list p {
+  margin: 0; }
+.m-reward-list .rewards {
+  list-style-type: none; }
+.m-reward-list .rewards li {
+  height: 3.3rem;
+  margin: 0.6rem 0; }
+.m-reward-list .rewards img {
+  height: 100%;
+  float: left; }
+.m-reward-list .rewards .infor {
+  float: left;
+  margin: 0.5rem 0 0 0.3rem; }
+.m-reward-list .rewards .title {
+  color: #fff;
+  font-size: 1.3rem; }
+.m-reward-list .rewards .desc {
+  color: #a7a7a7;
+  font-size: 1rem; }
+.m-reward-list .word {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 1rem; }
+.m-reward-list .tips {
+  font-size: 1rem;
+  color: #a7a7a7;
+  margin: 0.5rem 0; }
+
+.m-qrcode {
+  text-align: center;
+  margin: 1.5rem 0; }
+.m-qrcode img {
+  width: 60%; }
+
+/*# sourceMappingURL=reward.css.map */

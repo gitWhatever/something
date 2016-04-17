@@ -1,0 +1,201 @@
+header {
+    text-align: center;
+    position: relative;
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+}
+header a {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    bottom: 20%;
+}
+header img {
+    height: 140%;
+}
+.orderBox {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.disimg img {
+    width: 100%;    
+    -webkit-box-shadow:0px 0px 36px 0px rgba(0,108,255,.86);
+    box-shadow:0 0 36px 0px rgba(0,108,255,.86);
+}
+.figure{
+    display: -webkit-box;
+
+    box-orient:horizontal ;
+    -webkit-box-orient:horizontal ;
+    box-direction:normal;
+    -webkit-box-direction:normal;
+
+    -webkit-flex-align:stretch;
+    flex-align:stretch;
+    -webkit-box-align:stretch;
+    box-align:stretch;
+}
+.disimg{
+    width: 34%;
+    line-height: 0;
+    margin-right: 6%;
+}
+.desc {
+    font-size: 1.44rem;
+    width: 59%;
+    position: relative;
+}
+.order-name{
+    margin-top: 0;
+    word-break: keep-all
+}
+.order-num{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.order-num p{
+    margin: 0 0 10px;
+}
+.opacity-bg{
+    background-color: rgba(255,255,255,.2);
+    padding: 1rem 1.6rem;
+}
+.choose_pre span{
+    float: left;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.choose_pre img{
+    float: right;
+    height: 1.5rem;
+}
+.choose_pre+.add-info{
+    margin-top: 1rem;
+}
+.add-info{
+    color: #fff;
+    font-size: 1.3rem;
+    position: relative;
+}
+.add-info p{
+    margin-top: 0px;
+}
+.add-info img{
+    position: absolute;
+    height: 1.5rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0px;
+}
+.add-info #name{
+    margin-right: 1rem;
+}
+.add-info address{
+    font-style: normal;
+    width: 88%;
+}
+.m-prize-box{
+    margin-top: 2rem;
+}
+.prize-list{
+    display: -webkit-box;
+
+    box-orient:horizontal ;
+    -webkit-box-orient:horizontal ;
+    box-direction:normal;
+    -webkit-box-direction:normal;
+
+    box-pack:justify;
+    -webkit-box-pack:justify;
+    margin-top: 1rem;
+}
+.s-prize{
+    padding-bottom: 17%;
+    width: 17%;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: border-box;
+} 
+.s-prize.empty{
+    border: 1px dashed #fdfdfd; 
+} 
+.s-prize:empty{
+    border: 1px dashed #fdfdfd; 
+}
+.s-prize img{
+    position:absolute;
+    width: 100%;
+    top: 1px;
+}
+.m-numer a{
+    color: #fff;
+    display: inline-block;
+    border:1px solid #fff;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    float: left;
+    box-sizing: border-box;
+}
+.m-numer .num{
+    width: 20%;
+    background-color: #000;
+    border: 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    float: left;
+    height: 26px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+.m-yun-charge{
+    margin-top: 2rem;
+}
+.m-yun-charge span{
+    font-size: 1.5rem
+}
+.m-yun-charge p{
+    margin-top: 10px;
+}
+.m-mr-diguo{
+    font-size: 1.4rem;
+}
+.m-mr-diguo img{
+    height: 3rem;
+    vertical-align: middle;
+}
+.m-input{
+    margin: 1rem 0 6rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,.2);
+    border: 0px;
+    color: #fff;
+}
+.m-buy{
+    width: 100%;
+    border-top: 1px solid rgba(113,113,113,.3);
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
+    background-color: #000;
+}
+.m-buy a{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+.m-buy a img{
+    height: 100%;
+}
+.m-buy p{
+    font-size: 1.5rem;
+    margin:1.2rem 2rem;
+}
+

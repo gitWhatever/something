@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <title>蒸汽帝国</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/taskCenter.css">
+</head>
+<body>
+    <section class="g-logo">
+        <img src="img/logo.png" alt="LOGO">
+        </section>
+    <section class="g-mid main">
+        <header class="m-header">
+            <img src="img/head_pic.png" class="header-img" alt="icon">
+            帝国执政官
+        </header>
+        <section >
+            <p class="word" style="margin-bottom: 5px"><span class="g-bold">蒙蒙</span>，你好，欢迎来到蒸汽帝国！</p>
+            <p class="word" style="margin-top: 0px">参与最新发布的任务，完成后，获得任务奖励。</p>
+        </section>
+    </section>
+    <section>
+        <section class="m-taskcenter">
+            <div class='task-status g-mid'>当前任务数为<span class='num'>5</span></div>
+            <ul class="tasklist">
+                <li class="cooling" style="background-image: url('./img/center_bg_01.jpg')">
+                    <img src="./img/1.png" alt="" class="icon">
+                    <p class="taskname">任务3: 加入帝国卫队</p>
+                    <p class="task-reward">任务奖励：抹茶拿铁烟油 x1</p>
+                    <a href="" class="accept">
+                        <img src="./img/task_accept.png" alt="">
+                    </a>
+                    <div class="countdown">
+                        冷却倒计时<div class="time">3：24：09</div><div class="process">
+                            <div class="cur-pcs" data-alltime='50' data-remaintime='30'></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cooling" style="background-image: url('./img/center_bg_02.jpg')">
+                    <img src="./img/1.png" alt="" class="icon">
+                    <p class="taskname">任务3: 加入帝国卫队</p>
+                    <p class="task-reward">任务奖励：抹茶拿铁烟油 x1</p>
+                    <a href="" class="accept">
+                        <img src="./img/task_accept.png" alt="">
+                    </a>
+                    <div class="countdown">
+                        冷却倒计时<div class="time">3：24：09</div><div class="process">
+                            <div class="cur-pcs" data-alltime='501' data-remaintime='310'></div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url('./img/center_bg_02.jpg')">
+                    <img src="./img/1.png" alt="" class="icon">
+                    <p class="taskname">任务3: 加入帝国卫队</p>
+                    <p class="task-reward">任务奖励：抹茶拿铁烟油 x1</p>
+                    <a href="" class="accept">
+                        <img src="./img/task_accept.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section class="g-mid task-footer">
+        <section class="m-taskcenter">
+            <div class='task-status'>任务奖品数为<span class='num'>5</span></div>
+            <ul class="rewardlist">
+                <li>
+                    <div class="pic">
+                        <img src="./img/cenp1.png" alt="1">
+                    </div>
+                    <div class="info">
+                        <p class="reward_name">滴油壶&nbsp;&nbsp;x1</p>
+                        <p>有效期倒计时&nbsp;2天10小时44分</p>
+                        <div class="process">
+                            <div class="cur-pcs" style="width:50%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="./img/cenp1.png" alt="1">
+                    </div>
+                    <div class="info">
+                        <p class="reward_name">滴油壶&nbsp;&nbsp;x1</p>
+                        <p>有效期倒计时&nbsp;2天10小时44分</p>
+                        <div class="process">
+                            <div class="cur-pcs" style="width:30%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="./img/cenp1.png" alt="1">
+                    </div>
+                    <div class="info">
+                        <p class="reward_name">滴油壶&nbsp;&nbsp;x1</p>
+                        <p>有效期倒计时&nbsp;2天10小时44分</p>
+                        <div class="process">
+                            <div class="cur-pcs" style="width:80%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $coolingTask = $('.cooling .countdown');
+            if ($coolingTask.length < 0) {
+                return;
+            }else{
+                $coolingTask.each(function(){
+                    countDown($(this));
+                })
+            }
+        });
+        function countDown($processContainer){
+            console.log(1);
+            var $timeContainer = $processContainer.find('.time'),
+                $curProcess = $processContainer.find('.cur-pcs'),
+                alltime = $curProcess.data('alltime'),
+                remaintime = $curProcess.data('remaintime'),
+                //剩余比例
+                ratio = 100,
+                //剩余时间
+                time = '';
+
+            remaintime = remaintime - 1;
+            ratio = ((remaintime / alltime) * 100).toFixed(1) + '%';
+            time = secondToString(remaintime);
+            $timeContainer.text(time);
+            $curProcess.css('width', ratio).data('remaintime',remaintime);
+
+            if (remaintime > 0) {
+                setTimeout(countDown,1000,$processContainer);
+            }else{
+                $processContainer.parent('.cooling').removeClass('cooling');
+            }
+        }
+        function secondToString(second){
+            var hour = 0,
+                minute = 0,
+                scd = 0;
+            hour = parseInt(second / (60*60));
+            minute = parseInt((second % (60*60)) / 60);
+            scd = parseInt(second % 60);
+            if (hour <　10) {
+                hour = '0' + hour;
+            };
+            if (minute <　10) {
+                minute = '0' + minute;
+            };
+            if (scd <　10) {
+                scd = '0' + scd;
+            };
+            return hour + ':' + minute + ':' + scd;
+        }
+    </script>
+</body>
+</html>

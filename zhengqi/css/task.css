@@ -1,0 +1,42 @@
+.m-pro{margin-top: .8rem;}
+.m-statement{margin-top: 6rem;text-align: center;}
+.m-statement strong{font-size: 2.4rem;}
+.m-statement p{max-width: 70%;margin: 0 auto;margin-top: 1rem;}
+.m-otherTask{margin-top:4rem;}
+.m-otherTask div{padding: 1.4rem 1rem;position: relative; box-sizing: border-box}
+.m-otherTask .taskmark{width: 3rem;height: 3rem;vertical-align: middle;margin-right: 1rem}
+.m-otherTask .accepta{position: absolute;right: 5px;top: 50%; transform: translate(0,-50%); -webkit-transform: translate(0,-50%);width: 24%;}
+.accepta img{width: 100%;}
+.m-otherTask span{font-weight: 700;font-size: 1.4rem;}
+.taskbg_1{background: url(../img/task_bg0.jpg) 0 0 no-repeat;background-size: 100% 100%;}
+.taskbg_2{background: url(../img/task_bg1.jpg) 0 0 no-repeat;background-size: 100% 100%;margin-top: .5rem;}
+.m-topic{margin-top: 2rem;text-align: center;height: 49%;}
+.m-topic div{height: 49%;}
+.imgradio{display: inline-block;height: 100%;max-width: 49%;position: relative;z-index: 2;}
+.imgradio:last-child{margin-left: -8%;}
+.imgradio:active{-webkit-box-shadow:0px 0px 36px 0px rgba(0,108,255,.86); box-shadow:0 0 36px 0px rgba(0,108,255,.86); z-index: 1;}
+.imgradio img{height: 100%;}
+.secondline{margin-top: .6rem;}
+.m-share{margin-top: 1rem;text-align: right;}
+.m-share a{color: #fff;font-size: 1.4rem;margin-right: 2rem;}
+.m-share a img{margin-left: 1rem;height: 2rem;vertical-align: middle;}
+
+ul, li{padding: 0;margin: 0;}
+.m-reward .main-img{width: 100%;}
+.m-reward .operated{width: 90%;margin: 0.8rem auto;}
+.m-reward .operated-area{width: 50%;float: left;padding: 1rem 1.3rem 0;box-sizing: border-box;}
+.m-reward .receive{border-right: 2px solid rgba(255, 255, 255, 0.2);}
+.m-reward .operated-area .title{font-size: 1.5rem;color: white;}
+.m-reward .operated-area img{height: 1.5rem;vertical-align: bottom;}
+.m-reward-list p{margin: 0;}
+.m-reward-list .rewards{list-style-type: none;}
+.m-reward-list .rewards li{height: 3.3rem;margin: 0.6rem 0;}
+.m-reward-list .rewards img{height: 100%;float: left;}
+.m-reward-list .rewards .infor{float: left;margin: 0.5rem 0 0 0.3rem;}
+.m-reward-list .rewards .title{color: #fff;font-size: 1.3rem;}
+.m-reward-list .rewards .desc{color: #a7a7a7;font-size: 1rem;}
+.m-reward-list .word{color: #fff;font-size: 1.3rem;margin-top: 1rem;}
+.m-reward-list .tips{font-size: 1rem;color: #a7a7a7;margin: 0.5rem 0;}
+.m-qrcode{text-align: center;margin: 1.5rem 0;}
+.m-qrcode img{width: 60%;}
+@media screen and (max-width:320px){.m-otherTask .taskmark{width: 2.4rem;height: 2.4rem;}} 
