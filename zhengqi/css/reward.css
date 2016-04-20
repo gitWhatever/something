@@ -26,14 +26,19 @@ ul, li {
 .m-reward-list .rewards {
   list-style-type: none; }
 .m-reward-list .rewards li {
-  height: 3.3rem;
-  margin: 0.6rem 0; }
+  margin: 0.6rem 0;
+  display: table;
+}
 .m-reward-list .rewards img {
-  height: 100%;
-  float: left; }
+  display: table-cell;
+  vertical-align: middle;
+  height: 3.3rem;
+}
 .m-reward-list .rewards .infor {
-  float: left;
-  margin: 0.5rem 0 0 0.3rem; }
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: .5rem;
+}
 .m-reward-list .rewards .title {
   color: #fff;
   font-size: 1.3rem; }
