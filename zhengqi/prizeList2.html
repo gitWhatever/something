@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+	<meta charset="UTF-8">
+	<title>蒸汽帝国</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/prize.css">
+</head>
+<body>
+	<main class="g-mid main">
+		<header>
+        	<a href="#"><img src="img/back.png" alt=""></a>
+        	任务奖品
+    	</header>
+    	<p class="m-p">选择任务奖品<span class="word">（最多可选5个与本商品绑定的奖品）</span></p>
+    	<section class="g-mid m-prizelist">
+            <div class="prizebox" data-id="1" data-disabled=1>
+                <img src="img/reward4.png" alt="">
+                <p class="name">tea up 抹茶拿铁</p>
+                <em class="sta">未选</em>
+            </div>
+            <div class="prizebox" data-id="2">
+                <img src="img/reward5.png" alt="">
+                <p class="name">滴油壶<br/></p>
+                <br/>
+                <em class="sta">未选</em>
+            </div>
+            <div class="prizebox" data-id="3">
+                <img src="img/reward6.png" alt="">
+                <p class="name">SONY索尼 电池</p>
+                <em class="sta">未选</em>
+            </div>
+        </section>
+    	<section class="g-mid m-prizelist">
+    		<div class="prizebox" data-id="4">
+				<img src="img/reward4.png" alt="">
+				<p class="name">小鹦鹉螺 雾化芯</p>
+				<em class="sta">未选</em>
+			</div>
+			<div class="prizebox" data-id="5">
+				<img src="img/reward5.png" alt="">
+				<p class="name">蓝色泡泡糖 哈密瓜泡泡糖</p>
+				<em class="sta">未选</em>
+			</div>
+			<div class="prizebox" data-id="6">
+				<img src="img/reward6.png" alt="">
+				<p class="name">宇宙迷雾 香稠蜂蜜牛奶</p>
+				<em class="sta">未选</em>
+			</div>
+    	</section>
+    	<section class="g-mid m-prizelist">
+    		<div class="prizebox" data-id="7">
+				<img src="img/reward4.png" alt="">
+				<p class="name">tea up 抹茶拿铁</p>
+				<em class="sta">未选</em>
+			</div>
+			<div class="prizebox" data-id="8">
+				<img src="img/reward5.png" alt="">
+				<p class="name">滴油壶<br/></p>
+				<br/>
+				<em class="sta">未选</em>
+			</div>
+
+    	</section>
+	</main>
+    <div class="m-fly">
+        <a href="javascript:void(0)" id="finish">选完了</a>
+    </div>
+	<script src="js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+        var max=5;//奖品数量上限
+        var prizeList=[];
+        !function init(){
+            $(document).on("click",".prizebox",function(){
+                var me=$(this);
+                var flag =me.hasClass("choose"),
+                    pId=me.data("id"); 
+                var disabled=me.data("disabled");
+                if(disabled){
+                    return false;
+                }
+                switch(!0){
+                    case (!flag && prizeList.length<max):
+                        me.addClass("choose").find(".sta").text("已选");
+                        prizeList.push(pId);
+                        prizeList.length>=5 && $("em:contains('未选')").text("不可选");
+                        break;
+
+                    case (!flag && prizeList.length>=max):
+                        alert("奖品数已达上限");
+                        return false;
+                        break;
+
+                    case (flag && prizeList.length>=max):
+                        $("em:contains('不可选')").text("未选");
+
+                    case (flag && prizeList.length<max):
+                        me.removeClass("choose").find(".sta").text("未选");
+                        var index=$.inArray(pId,prizeList);
+                        prizeList.splice(index,1);
+                }
+            }).on("click","#finish",function(){
+                if(confirm("确认选择这些奖品么?")){
+                    var prizeStr=prizeList.join(",");
+                    location.href="";
+                }
+            });
+        }();
+	</script>
+</body>
+</html>

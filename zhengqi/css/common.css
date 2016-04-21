@@ -77,6 +77,10 @@ a{
 	margin: 0 auto;
 	display: block;
 }
+.g-mid .word{
+    color: #a7a7a7;
+    font-size: 1.4rem;
+}
 .m-header{
 	margin-top: 2.5rem;
 	font-size: 1.8rem;
@@ -85,10 +89,6 @@ a{
 	width: 4rem;
 	min-height: 4rem;
 	vertical-align: middle;
-}
-.g-mid .word{
-    color: #a7a7a7;
-    font-size: 1.4rem;
 }
 .g-logo{
     margin:5rem 0 3rem;
@@ -103,3 +103,10 @@ a{
 .f-left{
     float:left;
 }
+@media screen and (max-width:320px){
+   .header-img{
+        width: 3.4rem;
+        min-height: 3.4rem;
+        vertical-align: middle;
+    } 
+} 

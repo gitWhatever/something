@@ -1,0 +1,94 @@
+header {
+    width: 89.3%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    font-size: 1.4rem;
+}
+header a {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    bottom: 10%;
+}
+header img {
+    height: 120%;
+}
+.m-p{
+    font-size: 1.4rem;
+}
+.m-p .word{
+    margin-left:.1rem;
+    font-size: 1.2rem;
+}
+.m-prizelist{
+    display: box;
+    display: -webkit-box;
+    /* -webkit-box-pack: justify; */
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    margin-top: 2rem;
+}
+.prizebox{
+    width: 26.4%;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    margin-right: 10.3%;
+}
+.m-prizelist .prizebox:last-child{
+    margin-right: 0;
+}
+.prizebox.choose:before{
+    background-color: transparent;
+}
+.prizebox:before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    height: 60%;
+    left: 0;
+    top: 0;
+    transition: background-color .4s ease-in-out;
+    -webkit-transition: background-color .4s ease-in-out;
+}
+.prizebox a{
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+}
+.prizebox img{
+    width: 100%;
+    /* -webkit-filter: brightness(.5);
+    filter:brightness(.5);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out; */
+}
+/* .prizebox.choose img{
+    -webkit-filter:none;
+} */
+.m-prizelist .name{
+    word-break: keep-all;
+    margin: .6rem 0;
+}
+.m-prizelist .sta{
+    font-style: normal;
+}
+.m-prizelist:last-child{
+    margin-bottom: 4rem;
+}
+.m-fly{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 1rem 0;
+}
+.m-fly a{
+    color: #fff;
+    font-size: 1.5rem;
+}
