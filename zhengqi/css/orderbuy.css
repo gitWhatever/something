@@ -1,3 +1,6 @@
+input{
+    border-radius: 0;
+}
 header {
     text-align: center;
     position: relative;
@@ -90,7 +93,7 @@ header img {
     right: 0px;
 }
 .add-info #name{
-    margin-right: 1rem;
+    margin-right: .6rem;
 }
 .add-info address{
     font-style: normal;
@@ -160,6 +163,11 @@ header img {
 }
 .m-yun-charge p{
     margin-top: 10px;
+    margin-bottom: 0;
+}
+.m-yun-charge p:last-child{
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
 .m-mr-diguo{
     font-size: 1.4rem;
